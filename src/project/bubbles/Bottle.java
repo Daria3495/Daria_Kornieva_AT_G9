@@ -2,16 +2,18 @@ package project.bubbles;
 
 public class Bottle {
 
-public double bottleVolume;
+    public double bottleVolume;
+    SparklingWater sparklingWater = new SparklingWater("white", 20,"sweet", 36.6);
+    public Bottle(double bottleVolume) {
+        this.bottleVolume = bottleVolume;
+    }
 
-public Bottle (double bottleVolume) {
-    this.bottleVolume= bottleVolume;
-}
+    public double getBottleVolume() {
+        return bottleVolume;
+    }
 
-SparklingWater sparklingWater = new SparklingWater();
-
-public void open() {
-    sparklingWater.degas();
-}
+    public void open() {
+        sparklingWater.degas();
+    }
 
 }

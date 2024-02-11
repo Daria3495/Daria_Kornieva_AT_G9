@@ -1,12 +1,10 @@
 package project.bubbles;
 
 public class Bubble {
-
     public final double BUBBLE_VOLUME = 0.3;
+    public String gasComposition;
 
-    public int gasComposition;
-
-    public Bubble (int gasComposition) {
+    public Bubble(String gasComposition) {
         this.gasComposition = gasComposition;
     }
 

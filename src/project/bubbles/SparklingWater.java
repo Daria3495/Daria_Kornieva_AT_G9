@@ -1,17 +1,30 @@
 package project.bubbles;
 
 public class SparklingWater extends Water {
+    Bubble bubbleComposition = new Bubble("CO2");
+    public Bubble[] bubbles = new Bubble[10000];
 
-    Bubble bubble = new Bubble(1);
+    public int numberOfBubbles;
 
-    public void pump(Bubble[] bubbles) {
-//   тут я думала передавать обьем бутылки и делать формулу (обьем бутылки(в мл) * 10000 / 1000)
-//   но не смогла передать сюда значения обьема бутылки и плюс, нужно ли делать этот метод возвратным?
-//    что бы возвращать число пузырьков
+    public SparklingWater(String color, int transparency, String smell, double temperature) {
+        super(color, transparency, smell, temperature);
+    }
+
+    public void pump(Bottle bottle) {
+        double bottleVolume = bottle.getBottleVolume();
+        for (int i = 0; i < bubbles.length * bottleVolume; i++) {
+            bubbles[i] = new Bubble("CO2");
+            i = numberOfBubbles;
+        }
     }
 
     public void degas() {
-
+        if (numberOfBubbles != 0) {
+            for (int i = 0; i < numberOfBubbles; i++) {
+                bubbles[i].burstBubble();
+                bubbles[i]=null;
+            }
+        }
     }
 
 }

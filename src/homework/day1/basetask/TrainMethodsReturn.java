@@ -12,24 +12,24 @@ public class TrainMethodsReturn {
         return newLongNumber;
     }
 
-    public String  returnNewChar(char charCharacter) {
+    public String returnNewChar(char charCharacter) {
         String newStringFromChar = String.valueOf(charCharacter) + charCharacter;
         return newStringFromChar;
     }
 
     public float returnNewFloat(float floatNumber) {
-        float newFloatNumber = floatNumber/2;
+        float newFloatNumber = floatNumber / 2;
         return newFloatNumber;
     }
 
     public double returnNewDouble(double doubleNumber) {
-        double newDoubleNumber = doubleNumber +8;
+        double newDoubleNumber = doubleNumber + 8;
         return newDoubleNumber;
     }
 
     public short returnNewShort(short shortNumber) {
         short newShortNumber = (short) (shortNumber - 1);
-        return  newShortNumber;
+        return newShortNumber;
     }
 
     public byte returnNewByte(byte byteNumber) {
