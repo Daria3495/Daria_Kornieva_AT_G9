@@ -11,6 +11,7 @@ public class ArrayRunner {
         System.out.println("Array is sorted in reverse order  " );
         arrayTask.mirroringArrayCalculation(new int[]{5, 3, 2, 5, 87, 67,1},6);
         arrayTask.mirroringArrayDisplaying();
+        arrayTask.drawDog();
 
 
     }

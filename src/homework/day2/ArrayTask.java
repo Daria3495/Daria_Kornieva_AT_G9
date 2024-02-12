@@ -47,6 +47,12 @@ public class ArrayTask {
         System.out.println(Arrays.toString(resultArray));
     }
 
-//    public void
+    public void drawDog () {
+        System.out.println("	  ^__^");
+        System.out.println("\t  (oo)\\\\_______");
+        System.out.println("\t (__)\\)\\/\\ \\");
+        System.out.println("\t      ||----w|\\");
+        System.out.println("\t      ||   ||");
+    }
 
 }
