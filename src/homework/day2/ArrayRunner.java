@@ -7,7 +7,9 @@ public class ArrayRunner {
         ArrayTask arrayTask = new ArrayTask();
 
         arrayTask.sumOfElements();
+        System.out.println("Array is sorted in reverse order  " );
+        arrayTask.mirroringArrayCalculation();
+        arrayTask.mirroringArrayDisplaying();
     }
-
 
 }
