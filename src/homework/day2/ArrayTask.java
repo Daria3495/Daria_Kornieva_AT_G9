@@ -3,26 +3,21 @@ package homework.day2;
 import java.util.Arrays;
 
 public class ArrayTask {
-
     int[] array = new int[10];
-
     int[] resultArray = new int[array.length];
     int sum;
     int count;
     int n = 3;
     int temp = 0;
 
-    public void sumOfElements() {
-        for (int i = 0; i < array.length; i++) {
-            array[i] = i;
-            int subtotal = sum + i;
-            sum = subtotal;
+    public void sumOfElements(int [] array, int n) {
+        for (int i = n-1; i < array.length; i+=n) {
+            sum = sum + array[i];
         }
-        System.out.println("Initial array = " + Arrays.toString(array));
         System.out.println("Sum of elements in array = " + sum);
     }
 
-    public int[] mirroringArrayCalculation() {
+    public int[] mirroringArrayCalculation(int[] array, int n) {
 
         for (int variable : array) {
             if (variable > n && variable != 0) {
@@ -51,5 +46,7 @@ public class ArrayTask {
     public void mirroringArrayDisplaying() {
         System.out.println(Arrays.toString(resultArray));
     }
+
+//    public void
 
 }
