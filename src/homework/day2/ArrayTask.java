@@ -1,5 +1,6 @@
 package homework.day2;
 
+import java.time.LocalDate;
 import java.util.Arrays;
 
 public class ArrayTask {
@@ -10,8 +11,8 @@ public class ArrayTask {
     int n = 3;
     int temp = 0;
 
-    public void sumOfElements(int [] array, int n) {
-        for (int i = n-1; i < array.length; i+=n) {
+    public void sumOfElements(int[] array, int n) {
+        for (int i = n - 1; i < array.length; i += n) {
             sum = sum + array[i];
         }
         System.out.println("Sum of elements in array = " + sum);
@@ -47,7 +48,20 @@ public class ArrayTask {
         System.out.println(Arrays.toString(resultArray));
     }
 
-    public void drawDog () {
+    public void divideOnCurrentDate(int[] array) {
+        LocalDate localDate = LocalDate.now();
+        int currentDate = localDate.getDayOfMonth();
+        int sum = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % currentDate == 0) {
+                sum +=array[i];
+            }
+        }
+        System.out.println("Sum of elements divided on current date: " + sum);
+    }
+
+    public void drawDog() {
         System.out.println("	  ^__^");
         System.out.println("\t  (oo)\\\\_______");
         System.out.println("\t (__)\\)\\/\\ \\");

@@ -11,8 +11,10 @@ public class ArrayRunner {
         System.out.println("Array is sorted in reverse order  " );
         arrayTask.mirroringArrayCalculation(new int[]{5, 3, 2, 5, 87, 67,1},6);
         arrayTask.mirroringArrayDisplaying();
-        arrayTask.drawDog();
 
+        arrayTask.divideOnCurrentDate(new int[]{12, 34, 45, 48, 96, 27, 88});
+
+        arrayTask.drawDog();
 
     }
 
