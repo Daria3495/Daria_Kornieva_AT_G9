@@ -5,32 +5,39 @@ import project.bubbles.boxing.Bottle;
 
 public class SparklingWater extends Water {
     Bubble bubbleComposition = new Bubble("CO2");
-    private Bubble[] bubbles = new Bubble[10000];
+    private Bubble[] bubbles;
     private boolean isOpened;
-    public int numberOfBubbles;
+    private int numberOfBubbles = 0;
     public SparklingWater(String color, int transparency, String smell, double temperature) {
         super(color, transparency, smell, temperature);
         isOpened();
     }
-    public void pump(Bottle bottle) {
-        double bottleVolume = bottle.getBottleVolume();
-        for (int i = 0; i < bubbles.length * bottleVolume; i++) {
-            bubbles[i] = new Bubble("CO2");
-            i = numberOfBubbles;
-        }
-    }
-
-    public void degas() {
+    private void degas() {
         if (numberOfBubbles != 0) {
             for (int i = 0; i < numberOfBubbles; i++) {
                 bubbles[i].burstBubble();
                 bubbles[i] = null;
             }
         }
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
-    public void isOpened(){
-        System.out.println(isOpened);
+    private void isOpened() {
+//        System.out.println();
+    }
+
+    public void pump(Bubble[] bubbles) {
+        this.bubbles=bubbles;
+        System.out.printf("Filled water with: %s", bubbles.length).println();
+    }
+
+    public void setOpened() {
+        isOpened();
+        degas();
     }
 
 }

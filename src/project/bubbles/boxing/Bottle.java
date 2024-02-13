@@ -1,13 +1,14 @@
 package project.bubbles.boxing;
 
+import project.bubbles.Bubble;
 import project.bubbles.liquids.SparklingWater;
+import project.bubbles.liquids.Water;
 
 public class Bottle {
-
     private double bottleVolume;
-    SparklingWater sparklingWater = new SparklingWater("white", 20, "sweet", 36.6);
+    private Water water;
 
-    public Bottle(double bottleVolume) {
+    public Bottle(double bottleVolume, int temperature) {
         this.bottleVolume = bottleVolume;
     }
 
@@ -16,7 +17,33 @@ public class Bottle {
     }
 
     public void open() {
-        sparklingWater.degas();
+        ((SparklingWater) water).setOpened();
     }
 
+    public void warm(int temperature) {
+
+    }
+
+    public Water getWater() {
+        return water;
+    }
+
+    public void setWater(Water water) {
+        this.water = water;
+    }
+
+    public void setBubbles() {
+        ((SparklingWater) water).pump(countNumberOfBubbles());
+    }
+
+    private Bubble[] countNumberOfBubbles() {
+        double bottleVolume = getBottleVolume();
+        int numberOfBubbles = (int) (bottleVolume * 10000);
+        Bubble[] bubbles = new Bubble[numberOfBubbles];
+
+        for (int i = 0; i < numberOfBubbles; i++) {
+            bubbles[i] = new Bubble("CO2");
+        }
+        return bubbles;
+    }
 }
