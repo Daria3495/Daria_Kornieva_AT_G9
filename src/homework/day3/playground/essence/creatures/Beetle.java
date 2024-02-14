@@ -1,6 +1,6 @@
 package homework.day3.playground.essence.creatures;
 
-public class Beetle extends Insect {
+public class Beetle extends Insect implements Crawlable {
     protected int mass;
 
     public void setMass(int mass) {
