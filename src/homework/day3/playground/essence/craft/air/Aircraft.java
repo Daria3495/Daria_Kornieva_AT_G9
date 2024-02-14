@@ -8,8 +8,9 @@ public abstract class Aircraft extends Matter implements Flyable, Transportable 
 
     protected String name;
 
-    public Aircraft() {
+    protected int id;
 
+    public Aircraft() {
     }
 
     public String getName() {
