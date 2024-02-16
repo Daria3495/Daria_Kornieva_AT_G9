@@ -8,11 +8,11 @@ public abstract class Aircraft extends Matter implements Flyable, Transportable 
 
     protected String name;
 
-    protected int weight;
+    protected int mass;
 
-    public Aircraft(int weight, String name) {
+    public Aircraft(int mass, String name) {
         this.name = name;
-        this.weight = weight;
+        this.mass = mass;
     }
 
     public String getName() {
@@ -21,6 +21,11 @@ public abstract class Aircraft extends Matter implements Flyable, Transportable 
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int move(int A, int B) {
+        System.out.printf("I am %s, my name is %s and I am moving from point %s to point %s", this.getClass().getSimpleName(), this.getName(), A, B).println();
+        return B - A;
     }
 
 }
