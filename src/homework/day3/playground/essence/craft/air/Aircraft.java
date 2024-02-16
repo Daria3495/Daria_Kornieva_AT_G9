@@ -8,8 +8,11 @@ public abstract class Aircraft extends Matter implements Flyable, Transportable 
 
     protected String name;
 
-    public Aircraft() {
+    protected int weight;
 
+    public Aircraft(int weight, String name) {
+        this.name = name;
+        this.weight = weight;
     }
 
     public String getName() {

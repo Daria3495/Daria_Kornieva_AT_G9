@@ -7,7 +7,6 @@ public abstract class Animal extends Matter {
     protected String name;
 
     public Animal() {
-
     }
 
     public String getName() {
@@ -19,7 +18,6 @@ public abstract class Animal extends Matter {
     }
 
     public void eat(Plant food) {
-        System.out.printf("I am %s", Animal.class.getName() +"and eat %s",Plant.class.getName()).println();
+        System.out.printf("I am %s", Animal.class.getName() + "and eat %s", Plant.class.getName()).println();
     }
-
 }
