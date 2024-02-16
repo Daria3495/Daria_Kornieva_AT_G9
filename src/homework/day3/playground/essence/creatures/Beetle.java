@@ -3,6 +3,10 @@ package homework.day3.playground.essence.creatures;
 public class Beetle extends Insect implements Crawlable {
     protected int mass;
 
+    public Beetle(int mass, String name) {
+        super(mass, name);
+    }
+
     public void setMass(int mass) {
         this.mass = mass;
     }

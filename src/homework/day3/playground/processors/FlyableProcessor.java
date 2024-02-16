@@ -11,6 +11,6 @@ public class FlyableProcessor {
     }
 
     public void runFlyable(Flyable flyable, String direction){
-        runFlyable(flyable,direction);
+        flyable.fly(direction);
     }
 }
