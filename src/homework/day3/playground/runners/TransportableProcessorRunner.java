@@ -44,5 +44,33 @@ public class TransportableProcessorRunner {
         Moped aMoped = new Moped(12, "Honda EM1 Moped");
         Motorbike aMotorbike = new Motorbike(12, "Suzuki GSX-R1000 Motorbike");
 
+//        transportableProcessor.runTransportable(transportableCopter);
+//        transportableProcessor.runTransportable(transportablePlane);
+//        transportableProcessor.runTransportable(transportableRocket);
+//        transportableProcessor.runTransportable(transportableCar);
+//        transportableProcessor.runTransportable(transportableMoped);
+//        transportableProcessor.runTransportable(transportableMotorbike);
+//        transportableProcessor.runTransportable(aircraftCopter);
+//        transportableProcessor.runTransportable(aircraftPlane);
+//        transportableProcessor.runTransportable(aircraftRocket);
+//        transportableProcessor.runTransportable(vehicleCar);
+//        transportableProcessor.runTransportable(vehicleMoped);
+//        transportableProcessor.runTransportable(vehicleMotorbike);
+//        transportableProcessor.runTransportable((Transportable) flyableCopter);  // тут после преведения - получилось нормально отобразить
+// вопрос - почему приводим к Транспортабле
+//        transportableProcessor.runTransportable((Transportable)flyablePlane);
+//        transportableProcessor.runTransportable((Transportable)flyableRocket);
+//        transportableProcessor.runTransportable((Transportable)rideableCar);
+//        transportableProcessor.runTransportable((Transportable)rideableMoped);
+//        transportableProcessor.runTransportable((Transportable)rideableMotorbike);
+//        transportableProcessor.runTransportable(aCopter);
+//        transportableProcessor.runTransportable(aPlane);
+//        transportableProcessor.runTransportable(aRocket);
+//        transportableProcessor.runTransportable(aCar);
+//        transportableProcessor.runTransportable(aMoped);
+//        transportableProcessor.runTransportable(aMotorbike);
+
+
+
     }
 }

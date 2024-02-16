@@ -2,8 +2,8 @@ package homework.day3.playground.essence.craft.air;
 
 public class Plane extends Aircraft {
 
-    public Plane(int weight, String name) {
-        super(weight,name);
+    public Plane(int mass, String name) {
+        super(mass,name);
     }
 
     @Override

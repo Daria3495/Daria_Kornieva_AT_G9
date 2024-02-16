@@ -13,7 +13,8 @@ public class TransportableProcessor {
     }
 
     public void runTransportable(Transportable transportable) {
-        transportable.move(CoordinatesGenerator.generateCoordinate(), CoordinatesGenerator.generateCoordinate());
-        System.out.printf("Transportable %s was moved %s points", this.getClass().getSimpleName(), transportable.move(CoordinatesGenerator.generateCoordinate(), CoordinatesGenerator.generateCoordinate()));
+        Class<? extends Transportable> transportableClass = transportable.getClass();
+        System.out.printf("Transportable %s was moved %s points", transportableClass.getSimpleName(), transportable.move(CoordinatesGenerator.generateCoordinate(), CoordinatesGenerator.generateCoordinate()));
     }
 }
+
