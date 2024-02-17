@@ -34,20 +34,18 @@ public class FlyableProcessorRunner {
         flyableProcessor.runFlyable(flyablePlane);
         flyableProcessor.runFlyable(aircraftCopter);
         flyableProcessor.runFlyable(flyableRocket);
-//        flyableProcessor.runFlyable(flyableFly);
-//        flyableProcessor.runFlyable(flyableMosquito);
+        flyableProcessor.runFlyable(flyableFly);
+        flyableProcessor.runFlyable(flyableMosquito);
         flyableProcessor.runFlyable(aircraftPlane);
         flyableProcessor.runFlyable(aircraftRocket);
-//        flyableProcessor.runFlyable((Flyable) insectFly);
-//        flyableProcessor.runFlyable((Flyable) insectMosquito);
+        flyableProcessor.runFlyable((Flyable) insectFly);
+        flyableProcessor.runFlyable((Flyable) insectMosquito);
         flyableProcessor.runFlyable(aCopter);
         flyableProcessor.runFlyable(aPlane);
         flyableProcessor.runFlyable(aRocket);
-//        flyableProcessor.runFlyable(aFly);
-//        flyableProcessor.runFlyable(aMosquito);
+        flyableProcessor.runFlyable(aFly);
+        flyableProcessor.runFlyable(aMosquito);
         flyableProcessor.runFlyable(aCopter, "никуда");
         flyableProcessor.runFlyable(flyablePlane,"повсюду");
     }
 }
-
-// класс Fly, Mosquito наследуются от Insect по-этому нет возможности получить имя обьекта
