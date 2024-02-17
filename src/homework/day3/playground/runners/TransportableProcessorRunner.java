@@ -57,7 +57,7 @@ public class TransportableProcessorRunner {
         transportableProcessor.runTransportable(vehicleMoped);
         transportableProcessor.runTransportable(vehicleMotorbike);
         transportableProcessor.runTransportable((Transportable) flyableCopter);  // тут после преведения - получилось нормально отобразить
-// вопрос - почему приводим к Транспортабле
+//// вопрос - почему приводим к Транспортабле
         transportableProcessor.runTransportable((Transportable)flyablePlane);
         transportableProcessor.runTransportable((Transportable)flyableRocket);
         transportableProcessor.runTransportable((Transportable)rideableCar);
@@ -72,7 +72,6 @@ public class TransportableProcessorRunner {
 
         transportableProcessor.runTransportable(vehicleCar,23, 242);
         transportableProcessor.runTransportable(transportableRocket,93, 7);
-// нужно ли приводить дистанцию по модулю, что бы не было минусового значения?
 
     }
 }
