@@ -7,13 +7,13 @@ public class GenericMethodsInGenericClassT<T> {
     }
 
     public String genericMethodTwoGenArgs(T arg1, T arg2) {
-        String result = "We are objects of %s class and $s class";
-        return result;
+        return "We are objects of " + arg1.getClass().getSimpleName() + " class and "
+                + arg2.getClass().getSimpleName() + " class";
     }
 
     public void genericMethodHalfGenArgs(T arg3, String stringArg) {
-        System.out.printf("I got an object of %s %s and String with %s characters\n", arg3.getClass().getSimpleName(),
-                stringArg.getClass().getSimpleName(), stringArg.length());
+        System.out.printf("I got an object of %s class and String with %s characters\n", arg3.getClass().getSimpleName(),
+                stringArg.length());
     }
 
 }
