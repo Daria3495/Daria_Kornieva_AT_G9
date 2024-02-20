@@ -72,15 +72,15 @@ public class GenericMethodsInGenericClassTwoParamsRunner {
                 new Motorbike(75, ""), "Motorbike");
         mopedMotorbikeObject.genericMethodHalfGenArgs(new Motorbike(54, ""), "text");
 
-        System.out.println(bottleCanObject.genericMethodGenArgs(new Bottle(65.98, 65), new Can()));
+        System.out.println(bottleCanObject.genericMethodGenArgs(new Bottle(65.98, 65), new Can(4, "")));
         System.out.println(bottleCanObject.genericMethodGenArgs(new Bottle(76.98, 6)));
-        bottleCanObject.genericMethodHalfGenArgs(new Can(), "can");
-        bottleCanObject.genericMethodHalfGenArgs(new Bottle(65.98, 6), new Can(), "");
+        bottleCanObject.genericMethodHalfGenArgs(new Can(3,""), "can");
+        bottleCanObject.genericMethodHalfGenArgs(new Bottle(65.98, 6), new Can(3,""), "");
 
-        System.out.println(mugBeetleObject.genericMethodGenArgs(new Mug()));
-        System.out.println(mugBeetleObject.genericMethodGenArgs(new Mug(), new Beetle(5,"")));
+        System.out.println(mugBeetleObject.genericMethodGenArgs(new Mug(4, "")));
+        System.out.println(mugBeetleObject.genericMethodGenArgs(new Mug(1, ""), new Beetle(5,"")));
         mugBeetleObject.genericMethodHalfGenArgs(new Beetle(4, ""), "text");
-        mugBeetleObject.genericMethodHalfGenArgs(new Mug(), new Beetle(7,""), "here text");
+        mugBeetleObject.genericMethodHalfGenArgs(new Mug(4, ""), new Beetle(7,""), "here text");
 
         System.out.println(carrotChamomileObject.genericMethodGenArgs(new Carrot(), new Chamomile()));
         System.out.println(carrotChamomileObject.genericMethodGenArgs(new Carrot()));

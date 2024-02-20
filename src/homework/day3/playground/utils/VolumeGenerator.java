@@ -11,21 +11,17 @@ public class VolumeGenerator {
 
     public static int generateVolume(Pourable pourable) {
 
-        Petrol petrol = new Petrol();
-        Diesel diesel = new Diesel();
-        Water water = new Water();
-
-
         Random random = new Random();
-        int randomNumber = random.nextInt(1,100);
+        int randomNumber = 0;
 
-        if (randomNumber >=1 && randomNumber< 50) {
-            pourable = petrol;
-            pourable = diesel;
-        } else if (randomNumber >=50 && randomNumber< 100) {
-            pourable = water;
+        if (pourable instanceof Petrol || pourable instanceof Diesel) {
+            randomNumber = random.nextInt(1, 50);
+        } else if (pourable instanceof Water) {
+            randomNumber = random.nextInt(50, 100);
         }
-        System.out.printf("VolumeGenerator: I have generated volume of %s with value: %s", pourable, randomNumber);
+
+        System.out.printf("VolumeGenerator: I have generated volume of %s with value: %s\n",
+                pourable.getClass().getSimpleName(), randomNumber);
 
         return randomNumber;
     }

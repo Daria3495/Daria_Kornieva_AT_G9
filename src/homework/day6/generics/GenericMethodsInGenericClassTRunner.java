@@ -96,13 +96,13 @@ public class GenericMethodsInGenericClassTRunner {
                 new Bottle(6.7,8)));
         bottleObject.genericMethodHalfGenArgs(new Bottle(3.3,5), "botlle");
 
-        canObject.genericMethodOneGenArg(new Can());
-        System.out.println(canObject.genericMethodTwoGenArgs(new Can(), new Can()));
-        canObject.genericMethodHalfGenArgs(new Can(),"can");
+        canObject.genericMethodOneGenArg(new Can(3, ""));
+        System.out.println(canObject.genericMethodTwoGenArgs(new Can(2, ""), new Can(1, "")));
+        canObject.genericMethodHalfGenArgs(new Can(4, ""),"can");
 
-        mugObject.genericMethodOneGenArg(new Mug());
-        System.out.println(mugObject.genericMethodTwoGenArgs(new Mug(), new Mug()));
-        mugObject.genericMethodHalfGenArgs(new Mug(), "mug");
+        mugObject.genericMethodOneGenArg(new Mug(2, ""));
+        System.out.println(mugObject.genericMethodTwoGenArgs(new Mug(4, ""), new Mug(3, "")));
+        mugObject.genericMethodHalfGenArgs(new Mug(3, ""), "mug");
 
         beetleObject.genericMethodOneGenArg(new Beetle(4,""));
         System.out.println(beetleObject.genericMethodTwoGenArgs(new Beetle(4,""),
