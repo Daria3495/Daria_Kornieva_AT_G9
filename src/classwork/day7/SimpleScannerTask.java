@@ -2,7 +2,7 @@ package classwork.day7;
 
 import java.util.Scanner;
 
-public class ScannerTask {
+public class SimpleScannerTask {
 
     public static void main(String[] args) {
 
