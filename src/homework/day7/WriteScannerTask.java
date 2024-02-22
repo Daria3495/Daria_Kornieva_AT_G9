@@ -8,8 +8,7 @@ import java.util.Scanner;
 
 public class WriteScannerTask {
 
-    public static void main(String[] args) {
-
+    public void createScannerFile() {
         Scanner scanner = new Scanner(System.in);
 
         String input = scanner.nextLine();
@@ -24,5 +23,12 @@ public class WriteScannerTask {
         } catch (IOException e) {
             System.out.println(e);
         }
+    }
+
+    public static void main(String[] args) {
+
+        WriteScannerTask writeScannerTask = new WriteScannerTask();
+        writeScannerTask.createScannerFile();
+
     }
 }

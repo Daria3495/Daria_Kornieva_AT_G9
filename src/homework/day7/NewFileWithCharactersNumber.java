@@ -7,7 +7,7 @@ import java.time.LocalTime;
 
 public class NewFileWithCharactersNumber {
 
-    public static void main(String[] args) {
+    public void createFileWithCharacters() {
 
         try {
             BufferedReader reader = new BufferedReader(new FileReader("file.txt"));
@@ -30,6 +30,14 @@ public class NewFileWithCharactersNumber {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+    }
+
+    public static void main(String[] args) {
+
+        NewFileWithCharactersNumber newFile = new NewFileWithCharactersNumber();
+
+        newFile.createFileWithCharacters();
     }
 
 }

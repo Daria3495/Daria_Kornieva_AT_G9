@@ -4,24 +4,36 @@ import java.io.*;
 
 public class WithoutConsonants {
 
-    public static void main(String[] args) throws FileNotFoundException, IOException {
+    public void removeConsonants() {
 
-        BufferedReader reader = new BufferedReader(new FileReader("file.txt"));
+        try {
 
-        String line;
+            BufferedReader reader = new BufferedReader(new FileReader("file.txt"));
 
-        if (!((line = reader.readLine()) != null)) {
-            return;
+            String line;
+
+            if (!((line = reader.readLine()) != null)) {
+                return;
+            }
+            reader.close();
+
+            BufferedWriter writeWithoutConsonants = new BufferedWriter(new FileWriter("file.txt", true));
+
+            String updatedText = line.replaceAll("[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ]", "");
+            writeWithoutConsonants.newLine();
+            writeWithoutConsonants.newLine();
+            writeWithoutConsonants.write(updatedText);
+            writeWithoutConsonants.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        reader.close();
+    }
 
-        BufferedWriter writeWithoutConsonants = new BufferedWriter(new FileWriter("file.txt", true));
+    public static void main(String[] args) {
 
-        String updatedText = line.replaceAll("[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ]", "");
-        writeWithoutConsonants.newLine();
-        writeWithoutConsonants.newLine();
-        writeWithoutConsonants.write(updatedText);
-        writeWithoutConsonants.close();
+        WithoutConsonants withoutConsonants = new WithoutConsonants();
+
+        withoutConsonants.removeConsonants();
     }
 
 }

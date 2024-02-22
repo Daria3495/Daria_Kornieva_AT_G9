@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 public class ScannerTask {
 
-    public static void main(String[] args) {
-
+    public void scannerTextCreation() {
         Scanner scanner = new Scanner(System.in);
 
         while (scanner.hasNext()) {
@@ -17,6 +16,13 @@ public class ScannerTask {
             }
             System.out.printf("Hello, I just get %s from you\n", variable);
         }
+    }
+
+    public static void main(String[] args) {
+
+        ScannerTask scannerTask = new ScannerTask();
+
+        scannerTask.scannerTextCreation();
 
     }
 
