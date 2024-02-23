@@ -2,7 +2,13 @@ package homework.day3.playground.essence.creatures;
 
 import homework.day3.playground.essence.Flyable;
 
-public class Fly extends Insect implements Flyable {
+import java.io.Serializable;
+
+public class Fly extends Insect implements Flyable, Serializable {
+
+    private static final long serialVersionUID = 1L;
+    public Fly() {
+    }
 
     public Fly(int mass, String name) {
         super(mass, name);
