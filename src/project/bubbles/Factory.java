@@ -4,7 +4,7 @@ import project.bubbles.boxing.Bottle;
 import project.bubbles.liquids.SparklingWater;
 import project.bubbles.liquids.Water;
 
-public class Runner {
+public class Factory {
 
     public static void main(String[] args) {
 
