@@ -15,8 +15,9 @@ public class SerializableObject implements Serializable {
         try (FileOutputStream fos = new FileOutputStream("fos.txt");
              ObjectOutputStream oos = new ObjectOutputStream(fos)) {
 
-            oos.writeObject(new Fly(4, "Victor"));
-            oos.close();
+            Fly fly = new Fly(4, "Victor");
+            oos.writeObject(fly);
+            System.out.printf("Обьект %s успешно записан в файл", fly);
 
         } catch (IOException e) {
             e.printStackTrace();
