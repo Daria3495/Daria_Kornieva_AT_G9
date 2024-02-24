@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 public class Fly extends Insect implements Flyable, Serializable {
 
-    private static final long serialVersionUID = 1L;
+//    private static final long serialVersionUID = -5612093780891496020L;
     public Fly() {
     }
 
@@ -16,5 +16,13 @@ public class Fly extends Insect implements Flyable, Serializable {
 
     public void fly(String direction) {
         System.out.printf("I am %s, my name is %s and I amd flying to %s", this.getClass().getSimpleName(), this.getName(), direction).println();
+    }
+
+    @Override
+    public String toString() {
+        return "Fly{" +
+                "name='" + name + '\'' +
+                ", mass=" + mass +
+                '}';
     }
 }

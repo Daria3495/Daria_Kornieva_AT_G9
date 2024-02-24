@@ -1,5 +1,7 @@
 package homework.day3.playground.essence;
 
+import java.io.Serializable;
+
 public abstract class Matter {
 
     protected int mass;
