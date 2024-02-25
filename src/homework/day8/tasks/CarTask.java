@@ -13,8 +13,8 @@ public class CarTask {
 
     public void writeToFile() {
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("cars"))) {
-            for (String i : carsList) {
-                bufferedWriter.write("\"" + i + "\"\n");
+            for (String car : carsList) {
+                bufferedWriter.write("\"" + car + "\"\n");
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -46,8 +46,8 @@ public class CarTask {
     }
 
     public void printListWithSpace () {
-        for (String i : carsList) {
-            System.out.print(i + " ");
+        for (String car : carsList) {
+            System.out.print(car + " ");
         }
     }
 

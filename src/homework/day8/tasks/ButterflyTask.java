@@ -10,8 +10,8 @@ public class ButterflyTask {
 
     public void addButterflies() {
 
-        for (String i : butterfliesArray) {
-            butterflies.add(i);
+        for (String butterfly : butterfliesArray) {
+            butterflies.add(butterfly);
         }
 
         for (String iterator : butterflies) {
@@ -33,15 +33,15 @@ public class ButterflyTask {
 
     public void printWithSpace() {
 
-        for (String i : butterflies) {
-            System.out.print(i + " ");
+        for (String butterfly : butterflies) {
+            System.out.print(butterfly + " ");
         }
     }
 
     public void printNewLine() {
 
-        for (String i : butterflies) {
-            System.out.println(i);
+        for (String butterfly : butterflies) {
+            System.out.println(butterfly);
         }
 
     }

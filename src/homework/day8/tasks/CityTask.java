@@ -11,8 +11,8 @@ public class CityTask {
 
     public void printNewLine() {
 
-        for (String i : citiesList) {
-            System.out.println(i);
+        for (String city : citiesList) {
+            System.out.println(city);
         }
     }
 

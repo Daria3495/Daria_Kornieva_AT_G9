@@ -37,8 +37,8 @@ public class FiguresTask {
     }
 
     public void printWithSpace() {
-        for (String i : figuresList) {
-            System.out.print(i + " ");
+        for (String figure : figuresList) {
+            System.out.print(figure + " ");
         }
     }
 
@@ -46,8 +46,8 @@ public class FiguresTask {
 
         figuresList.add(2, "Triangle");
 
-        for (String i : figuresList) {
-            System.out.print(i + " ");
+        for (String figure : figuresList) {
+            System.out.print(figure + " ");
         }
     }
 

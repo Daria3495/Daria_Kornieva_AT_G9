@@ -15,8 +15,8 @@ public class CountryTask {
     }
 
     public void printObject() {
-        for (String i : countriesList) {
-            System.out.print(i + ", ");
+        for (String country : countriesList) {
+            System.out.print(country + ", ");
         }
     }
 
@@ -24,8 +24,8 @@ public class CountryTask {
 
         int numberOfCountries = 0;
 
-        for (String i : countriesList) {
-            if (i.length() < 7) {
+        for (String country : countriesList) {
+            if (country.length() < 7) {
                 numberOfCountries++;
             }
         }
