@@ -1,5 +1,7 @@
 package homework.day8.tasks;
 
+import homework.day8.tasks.utils.PrintUtil;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -8,14 +10,6 @@ public class CityTask {
 
     String[] citiesArray = {"Минск", "Москва", "Берлин"};
     List<String> citiesList = new ArrayList<>(Arrays.asList(citiesArray));
-
-    public void printNewLine() {
-
-        for (String city : citiesList) {
-            System.out.println(city);
-        }
-    }
-
     public void countAllLetters() {
 
         int numberOfLetters = 0;
@@ -25,21 +19,12 @@ public class CityTask {
         }
         System.out.println("Number of letters in all words: " + numberOfLetters);
     }
-
-    public void printWithSpace() {
-
-        for (int i = 0; i < citiesList.size(); i++) {
-            System.out.print(citiesList.get(i) + " ");
-        }
-    }
-
-
     public static void main(String[] args) {
         CityTask cityTask = new CityTask();
 
-        cityTask.printNewLine();
+        PrintUtil.printListWithForEach(cityTask.citiesList, "\n");
         cityTask.countAllLetters();
-        cityTask.printWithSpace();
+        PrintUtil.printListByIndex(cityTask.citiesList);
     }
 
 }

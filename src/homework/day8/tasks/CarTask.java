@@ -1,5 +1,7 @@
 package homework.day8.tasks;
 
+import homework.day8.tasks.utils.PrintUtil;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -44,13 +46,6 @@ public class CarTask {
             }
         }
     }
-
-    public void printListWithSpace () {
-        for (String car : carsList) {
-            System.out.print(car + " ");
-        }
-    }
-
     public static void main(String[] args) {
 
         CarTask carTask = new CarTask();
@@ -58,6 +53,6 @@ public class CarTask {
         carTask.writeToFile();
         carTask.removeObject();
         carTask.removeObjectUsingIterator();
-        carTask.printListWithSpace();
+        PrintUtil.printListWithForEach(carTask.carsList, " ");
     }
 }

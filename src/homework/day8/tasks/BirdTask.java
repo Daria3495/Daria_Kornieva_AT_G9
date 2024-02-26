@@ -1,10 +1,14 @@
 package homework.day8.tasks;
 
+import homework.day8.tasks.utils.PrintUtil;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class BirdTask {
+
+    public final String VOWELS = "ауоиэыяюеёАУОИЭЫЯЮЕЁ";
 
     List<String> birdsList = new ArrayList<>(Arrays.asList("Чайка", "Дрозд", "Бусел", "Голубь", "Воробей", "Цапля"));
 
@@ -18,27 +22,15 @@ public class BirdTask {
 
         int numberOfBirds = 0;
         for (String bird : birdsList) {
-            if (bird.matches(".*[ауоиэы].*[ауоиэы].*")) {
+            if (bird.matches(".*[VOWELS].*[VOWELS].*")) {
                 numberOfBirds++;
             }
         }
         System.out.println("Number of birds with more than 1 vowel: " + numberOfBirds);
     }
 
-    public void printByIndex() {
-        for (int i = 0; i < birdsList.size(); i++) {
-            System.out.print(birdsList.get(i) + " ");
-        }
-    }
-
     public void changeObject() {
         birdsList.set(2, "Синица");
-    }
-
-    public void printWithSpace() {
-        for (String bird : birdsList) {
-            System.out.print(bird + " ");
-        }
     }
 
     public static void main(String[] args) {
@@ -46,9 +38,9 @@ public class BirdTask {
 
         birdTask.printObjects();
         birdTask.countVowels();
-        birdTask.printByIndex();
+        PrintUtil.printListByIndex(birdTask.birdsList);
         System.out.println();
         birdTask.changeObject();
-        birdTask.printWithSpace();
+        PrintUtil.printListWithForEach(birdTask.birdsList, " ");
     }
 }

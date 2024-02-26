@@ -1,5 +1,7 @@
 package homework.day8.tasks;
 
+import homework.day8.tasks.utils.PrintUtil;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,29 +33,13 @@ public class ButterflyTask {
         System.out.println("Number of objects which contain 'o' is: " + numberOfWordsContainLetter);
     }
 
-    public void printWithSpace() {
-
-        for (String butterfly : butterflies) {
-            System.out.print(butterfly + " ");
-        }
-    }
-
-    public void printNewLine() {
-
-        for (String butterfly : butterflies) {
-            System.out.println(butterfly);
-        }
-
-    }
-
-
     public static void main(String[] args) {
         ButterflyTask butterflyTask = new ButterflyTask();
         butterflyTask.addButterflies();
-        System.out.println("");
+        System.out.println();
         butterflyTask.countO();
-        butterflyTask.printWithSpace();
-        System.out.println("");
-        butterflyTask.printNewLine();
+        PrintUtil.printListWithForEach(butterflyTask.butterflies, " ");
+        System.out.println();
+        PrintUtil.printListWithForEach(butterflyTask.butterflies, "\n");
     }
 }

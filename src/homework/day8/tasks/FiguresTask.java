@@ -1,5 +1,7 @@
 package homework.day8.tasks;
 
+import homework.day8.tasks.utils.PrintUtil;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -36,19 +38,8 @@ public class FiguresTask {
 
     }
 
-    public void printWithSpace() {
-        for (String figure : figuresList) {
-            System.out.print(figure + " ");
-        }
-    }
-
     public void addNewFigure() {
-
         figuresList.add(2, "Triangle");
-
-        for (String figure : figuresList) {
-            System.out.print(figure + " ");
-        }
     }
 
 
@@ -57,9 +48,9 @@ public class FiguresTask {
 
         figuresTask.writeToFile();
         figuresTask.countFiguresWithoutLetter();
-        figuresTask.printWithSpace();
+        PrintUtil.printListWithForEach(figuresTask.figuresList, " ");
         System.out.println();
         figuresTask.addNewFigure();
-
+        PrintUtil.printListWithForEach(figuresTask.figuresList, " ");
     }
 }

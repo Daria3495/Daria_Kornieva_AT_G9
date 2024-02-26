@@ -1,5 +1,7 @@
 package homework.day8.tasks;
 
+import homework.day8.tasks.utils.PrintUtil;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,12 +14,6 @@ public class CountryTask {
         countriesList.add("Португалия");
         countriesList.add("Англия");
         countriesList.add("Замбия");
-    }
-
-    public void printObject() {
-        for (String country : countriesList) {
-            System.out.print(country + ", ");
-        }
     }
 
     public void countObjects() {
@@ -41,7 +37,7 @@ public class CountryTask {
     public static void main(String[] args) {
         CountryTask countryTask = new CountryTask();
         countryTask.addCountry();
-        countryTask.printObject();
+        PrintUtil.printListWithForEach(countryTask.countriesList, ", ");
         System.out.println();
         countryTask.countObjects();
         System.out.println();

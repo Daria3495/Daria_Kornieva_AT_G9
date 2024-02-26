@@ -1,5 +1,7 @@
 package homework.day8.tasks;
 
+import homework.day8.tasks.utils.PrintUtil;
+
 import javax.naming.ldap.SortResponseControl;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,13 +18,6 @@ public class ElementTask {
         elementsList.add("Picker");
         elementsList.add("Breadcrumb");
     }
-
-    public void printViaForEach() {
-        for (String element : elementsList) {
-            System.out.print(element + " ");
-        }
-    }
-
     public void countMoreThanOneWord() {
         int counter = 0;
 
@@ -32,14 +27,6 @@ public class ElementTask {
             }
         }
         System.out.println("Number of names of elements where more than 1 word: " + counter);
-    }
-
-    public void printViaIndex() {
-
-        for (int i = 0; i < elementsList.size(); i++) {
-            System.out.print(elementsList.get(i) + " ");
-        }
-
     }
 
     public void addObject() {
@@ -57,10 +44,10 @@ public class ElementTask {
     public static void main(String[] args) {
         ElementTask elementTask = new ElementTask();
         elementTask.addElement();
-        elementTask.printViaForEach();
+        PrintUtil.printListWithForEach(elementTask.elementsList, " ");
         System.out.println();
         elementTask.countMoreThanOneWord();
-        elementTask.printViaIndex();
+        PrintUtil.printListByIndex(elementTask.elementsList);
         System.out.println();
         elementTask.addObject();
 //        elementTask.printViaForEach();
@@ -69,7 +56,7 @@ public class ElementTask {
 //        elementTask.printViaIndex();
 //        System.out.println();  что бы посмотреть вывод раскомментить
         elementTask.changeObject();
-        elementTask.printViaForEach();
+        PrintUtil.printListWithForEach(elementTask.elementsList, " ");
     }
 
 }
