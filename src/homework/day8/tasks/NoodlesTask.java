@@ -36,7 +36,7 @@ public class NoodlesTask {
         System.out.println();
         noodlesTask.changeLetter();
         System.out.println("Updated list when a letter in noodle is changed to o:");
-        PrintUtil.printListByIndex(noodlesTask.noodlesList);
+        PrintUtil.printListByIndex(noodlesTask.noodlesList, " ");
     }
 
 }

@@ -30,7 +30,7 @@ public class IntNumberTask {
         PrintUtil.printListWithForEach(intNumberTask.intNumbersList, "\n");
         intNumberTask.countAllNumbers();
         intNumberTask.sortInAscendingOrder();
-        PrintUtil.printListByIndex(intNumberTask.intNumbersList);
+        PrintUtil.printListByIndex(intNumberTask.intNumbersList, " ");
         System.out.println();
         intNumberTask.sortInDescendingOrder();
         PrintUtil.printListWithForEach(intNumberTask.intNumbersList, " ");

@@ -33,7 +33,7 @@ public class DoubleNumberTask {
         PrintUtil.printListWithForEach(doubleNumberTask.doubleNumbersList, " ");
         System.out.println();
         doubleNumberTask.countAllNumbers();
-        PrintUtil.printListByIndex(doubleNumberTask.doubleNumbersList);
+        PrintUtil.printListByIndex(doubleNumberTask.doubleNumbersList, " ");
         System.out.println();
         doubleNumberTask.sumOfDecimalParts();
     }

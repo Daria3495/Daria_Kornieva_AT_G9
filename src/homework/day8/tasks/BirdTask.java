@@ -38,7 +38,7 @@ public class BirdTask {
 
         birdTask.printObjects();
         birdTask.countVowels();
-        PrintUtil.printListByIndex(birdTask.birdsList);
+        PrintUtil.printListByIndex(birdTask.birdsList, " ");
         System.out.println();
         birdTask.changeObject();
         PrintUtil.printListWithForEach(birdTask.birdsList, " ");

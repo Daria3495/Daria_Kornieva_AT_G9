@@ -24,7 +24,7 @@ public class CityTask {
 
         PrintUtil.printListWithForEach(cityTask.citiesList, "\n");
         cityTask.countAllLetters();
-        PrintUtil.printListByIndex(cityTask.citiesList);
+        PrintUtil.printListByIndex(cityTask.citiesList, " ");
     }
 
 }

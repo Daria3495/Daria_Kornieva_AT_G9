@@ -47,7 +47,7 @@ public class ElementTask {
         PrintUtil.printListWithForEach(elementTask.elementsList, " ");
         System.out.println();
         elementTask.countMoreThanOneWord();
-        PrintUtil.printListByIndex(elementTask.elementsList);
+        PrintUtil.printListByIndex(elementTask.elementsList, " ");
         System.out.println();
         elementTask.addObject();
 //        elementTask.printViaForEach();
