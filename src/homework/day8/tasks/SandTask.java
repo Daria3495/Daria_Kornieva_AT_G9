@@ -1,6 +1,7 @@
 package homework.day8.tasks;
 
 import homework.day8.my_objects.Sand;
+import homework.day8.tasks.utils.PrintUtil;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -41,24 +42,6 @@ public class SandTask {
         }
     }
 
-    public void printMapKey() {
-        for (Map.Entry<Integer, Sand> entry : sandMap.entrySet()) {
-            System.out.print(entry.getKey() + " ");
-        }
-    }
-
-    public void printMapValue() {
-        for (Map.Entry<Integer, Sand> entry : sandMap.entrySet()) {
-            System.out.println(entry.getValue() + " ");
-        }
-    }
-
-    public void printMap() {
-        for(Map.Entry<Integer,Sand> entry : sandMap.entrySet()) {
-            System.out.println(entry.getKey() + " - " + entry.getValue());
-        }
-    }
-
     public static void main(String[] args) {
         SandTask sandTask = new SandTask();
 
@@ -69,12 +52,12 @@ public class SandTask {
         System.out.println();
         sandTask.addObjectToMap();
         System.out.println("Key values: ");
-        sandTask.printMapKey();
+        PrintUtil.printMapKey(sandTask.sandMap, " ");
         System.out.println();
         System.out.println("Values in Map: ");
-        sandTask.printMapValue();
+        PrintUtil.printMapValue(sandTask.sandMap, "\n");
         System.out.println("Map values: ");
-        sandTask.printMap();
+        PrintUtil.printMap(sandTask.sandMap);
     }
 
 }
