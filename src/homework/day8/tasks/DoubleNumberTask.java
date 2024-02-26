@@ -9,12 +9,12 @@ public class DoubleNumberTask {
 
     List<Double> doubleNumbersList = Arrays.asList(33.42, 34.3, 0.79, 2.3426, 6.8, 13.24, 5.5, 769.9);
     public void countAllNumbers() {
-        double counter = 0;
+        double counter = 1;
 
         for (int i = 0; i < doubleNumbersList.size(); i++) {
-            counter += doubleNumbersList.get(i);
+            counter *= doubleNumbersList.get(i);
         }
-        System.out.println("Sum of all elements: " + counter); // sum 866.2926
+        System.out.println("Multiplication of all elements: " + counter);
     }
 
     public void sumOfDecimalParts() {
@@ -27,6 +27,14 @@ public class DoubleNumberTask {
         }
         System.out.println("Sum for deci,al part of numbers in list: " + result);
     }
+
+    public void printIntegerOfFraction() {
+        for (int i = 0; i < doubleNumbersList.size(); i++) {
+            double number = doubleNumbersList.get(i);
+            int integerPart = (int) number;
+            System.out.print(integerPart + " ");
+        }
+    }
     public static void main(String[] args) {
 
         DoubleNumberTask doubleNumberTask = new DoubleNumberTask();
@@ -36,5 +44,6 @@ public class DoubleNumberTask {
         PrintUtil.printListByIndex(doubleNumberTask.doubleNumbersList, " ");
         System.out.println();
         doubleNumberTask.sumOfDecimalParts();
+        doubleNumberTask.printIntegerOfFraction();
     }
 }
