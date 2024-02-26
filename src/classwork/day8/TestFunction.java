@@ -1,11 +1,11 @@
-package homework.day8.tasks.utils;
+package classwork.day8;
 
 import homework.day8.my_objects.Bubble;
 
 import java.util.List;
 import java.util.function.Function;
 
-public class Main {
+public class TestFunction {
 
     public static void main(String[] args) {
         List<Bubble> bubbles = List.of(new Bubble(1, "q"), new Bubble(2, "a"), new Bubble(3, "r"));
