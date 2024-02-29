@@ -27,7 +27,7 @@ public class StreamTest {
 
         List<String> fifth = list.stream().filter(s -> s.contains("м")).distinct().collect(Collectors.toList());
         System.out.println(fifth);
-        
+
     }
 
 
