@@ -8,7 +8,7 @@ public class CountriesRunner {
 
         Stream <String> countries = Stream.of("Андора", "Португалия", "Англия", "Змб");
 
-        countries.filter(s -> s.matches(".*[ауоиэыяюеёАУОИЭЫЯЮЕЁ]*.")).filter(s -> s.length() >7)
+        countries.filter(s -> s.matches(".*[ауоиэыяюеёАУОИЭЫЯЮЕЁ]")).filter(s -> s.length() <7)
                 .map(String::toUpperCase).map(s -> "\"" + s + "\"").forEach(System.out::println);
     }
 
