@@ -38,8 +38,7 @@ public class NumbersModRunner {
                             return number;
                     }
                 })
-                .collect(Collectors.toList())// зачем тут collect
-                .stream().distinct()
+                .distinct()
                 .sorted(Comparator.reverseOrder())
                 .forEach(System.out::println);
 
