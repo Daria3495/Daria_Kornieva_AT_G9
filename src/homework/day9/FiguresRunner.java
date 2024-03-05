@@ -10,7 +10,10 @@ public class FiguresRunner {
 
         Stream<String> figures = Stream.of("Овал", "Прямоугольник", "Круг", "Квадрат", "Эллипс");
 
-        figures.mapToInt(String::length).filter(length -> length > 4).forEach(System.out::println);
+        figures
+                .mapToInt(String::length)
+                .filter(length -> length > 4)
+                .forEach(System.out::println);
     }
 
 }

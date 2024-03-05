@@ -1,8 +1,9 @@
 package homework.day9;
 
+import homework.day8.my_objects.Bubble;
+
 import java.util.Arrays;
 import java.util.Random;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class DoublesRunner {
@@ -12,8 +13,9 @@ public class DoublesRunner {
 
 //        doubles
 //                .map(Math::round)
-//                .map(s -> new Random().ints(0, (int) (s+1)).boxed())
-//                .collect(Collectors.toList())
+//                .map(s -> new Random().nextInt(0, (int) (s+1)))
+//                .distinct()
+//                .flatMap(s -> Stream.generate(new Bubble(2,"Bubble")))
 //                .forEach(System.out::println);
     }
 

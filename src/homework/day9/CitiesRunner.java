@@ -13,7 +13,9 @@ public class CitiesRunner {
         cities.add("Москва");
         cities.add("Берлин");
 
-        System.out.println(cities.stream().mapToInt(s -> s.length()).sum());
+        System.out.println(cities
+                .stream()
+                .mapToInt(s -> s.length()).sum());
     }
 
 }

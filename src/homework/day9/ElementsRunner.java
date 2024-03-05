@@ -16,11 +16,11 @@ public class ElementsRunner {
 
         Stream<String> elements = Stream.of("Text field", "Radio", "Check-box", "Drop-down", "Picker", "Breadcrumb");
 
-//        elements
-//                .map(element -> (element % 2 == 0) ? element.toString().replace('е', 'о') :
-//                        elements -> element.length
-//                .distinct()
-//                .forEach(System.out::println);
+        elements
+                .map(element -> (element.length() % 2 == 0) ? element.replace('e', 'o') :
+                        element.length())
+                .distinct()
+                .forEach(System.out::println);
     }
 
 }
