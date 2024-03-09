@@ -17,7 +17,7 @@ public class DoublesRunner {
                 .map(s -> new Random().nextInt(0, (int) (s+1)))
                 .distinct()
                 .flatMap(s -> IntStream.range(0,s)
-                        .mapToObj(_ -> new Bubble(
+                        .mapToObj(d -> new Bubble(
                                 s, "Bubble vol-" + s)))
                 .forEach(System.out::println);
     }
