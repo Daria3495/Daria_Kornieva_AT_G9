@@ -11,10 +11,7 @@ public class Task_2 {
 
     public static void main(String[] args) {
 
-        List <Mouse> mouseList = new ArrayList<>();
-        for (int mouse = 1; mouse<=18; mouse++){
-            mouseList.add(new Mouse(mouse));
-        }
+        List <Mouse> mouseList = Util.fillListWithMouses(18);
 
         for (int i = 1; i <=7 ; i++) {
             for (int j = 0; j < mouseList.size(); j++) {
