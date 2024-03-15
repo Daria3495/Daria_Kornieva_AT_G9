@@ -12,37 +12,34 @@ public class Task_3 {
 
         List<Mouse> mouseList = Util.fillListWithMouses(280);
 
-        for (int i = 0; i < 5; i++) {
-            new Thread(() -> Util.removeMouse(mouseList)).start();
-        }
+//        for (int i = 0; i < 5; i++) {
+//            new Thread(() -> Util.removeMouse(mouseList)).start();
+//        }
         // почему тут тред айди для всех одинаков
-        // и почему в начале 3 потока
 
 //        for (int j = 0; j < 5; j++) {
 //            new Thread(() -> {
 //                while (!mouseList.isEmpty()) {
 //                    synchronized (mouseList.get(0)) {
-//        mouseList.iterator().next().peep();
-//                        mouseList.remove(0);
-//                        System.out.println(mouseList.size() + "Number of thread "
-//                                + Thread.activeCount() + "Thread id " + Thread.currentThread().threadId());
-//                    }
-//                }
-//            }).start();
-//        }
-//
-//        for (int i = 0; i < 5; i++) {
-//            new Thread(() -> {
-//                synchronized (mouseList) {
-//                    for (int j = 0; j < mouseList.size(); j++) {
 //                        mouseList.iterator().next().peep();
 //                        mouseList.remove(0);
-//                        System.out.println(mouseList.size() + "Number of thread "
-//                                + Thread.activeCount() + "Thread id " + Thread.currentThread().threadId());
+//                        System.out.println(mouseList.size() + "Thread id " + Thread.currentThread().threadId());
 //                    }
 //                }
 //            }).start();
 //        }
+
+        for (int i = 0; i < 5; i++) {
+            new Thread(() -> {
+                synchronized (mouseList) {
+                    for (int j = 0; j < mouseList.size(); j++) {
+                        mouseList.iterator().next().peep();
+                        mouseList.remove(0);
+                        System.out.println(mouseList.size() + "Thread id " + Thread.currentThread().threadId());
+                    }
+                }
+            }).start();
+        }
     }
 }
 // как ограничить колличество потоков

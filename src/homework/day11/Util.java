@@ -10,7 +10,7 @@ public class Util {
 
         for (int i = 1; i <= mouseNumber; i++) {
             mouseList.add(new Mouse(i));
-            System.out.println("Mouse added");
+//            System.out.println("Mouse added");
         }
         return mouseList;
     }
@@ -29,7 +29,8 @@ public class Util {
         mouseList.iterator().next().peep();
         mouseList.remove(0);
             try {
-                Thread.sleep(3000);
+                Thread.currentThread().sleep(3000);
+                System.out.println("Delay ");
             } catch (InterruptedException e) {
                 e.getCause();
             }

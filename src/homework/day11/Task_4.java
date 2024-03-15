@@ -14,7 +14,7 @@ public class Task_4 {
         for (int i = 0; i < 7; i++) {
             new Thread(() -> {
                 Util.removeListElementsWithDelay(mouseList);
-//                SleepUtil.sleep(3000); - когда все в одном метоже - работает, если вызывать отдельно - не работает
+//                SleepUtil.sleep(3000);  //когда все в одном метоже - работает, если вызывать отдельно - не работает
             }).start();
         }
     }
