@@ -10,6 +10,9 @@ import homework.day3.playground.essence.craft.hand.Can;
 import homework.day3.playground.essence.craft.hand.Mug;
 import homework.day3.playground.essence.creatures.*;
 import project.bubbles.boxing.Bottle;
+import project.bubbles.boxingMaterial.Glass;
+import project.bubbles.boxingMaterial.Metal;
+import project.bubbles.boxingMaterial.Plastic;
 
 public class GenericMethodsInGenericClassTwoParamsRunner {
 
@@ -72,10 +75,10 @@ public class GenericMethodsInGenericClassTwoParamsRunner {
                 new Motorbike(75, ""), "Motorbike");
         mopedMotorbikeObject.genericMethodHalfGenArgs(new Motorbike(54, ""), "text");
 
-        System.out.println(bottleCanObject.genericMethodGenArgs(new Bottle(65.98, 65), new Can(4, "")));
-        System.out.println(bottleCanObject.genericMethodGenArgs(new Bottle(76.98, 6)));
+        System.out.println(bottleCanObject.genericMethodGenArgs(new Bottle(65.98, 65, 12, new Glass()), new Can(4, "")));
+        System.out.println(bottleCanObject.genericMethodGenArgs(new Bottle(76.98, 6, 13, new Plastic())));
         bottleCanObject.genericMethodHalfGenArgs(new Can(3,""), "can");
-        bottleCanObject.genericMethodHalfGenArgs(new Bottle(65.98, 6), new Can(3,""), "");
+        bottleCanObject.genericMethodHalfGenArgs(new Bottle(65.98, 6, 43, new Metal()), new Can(3,""), "");
 
         System.out.println(mugBeetleObject.genericMethodGenArgs(new Mug(4, "")));
         System.out.println(mugBeetleObject.genericMethodGenArgs(new Mug(1, ""), new Beetle(5,"")));
