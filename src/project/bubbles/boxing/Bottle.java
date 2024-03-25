@@ -7,6 +7,9 @@ import project.bubbles.filler.SparklingWater;
 import project.bubbles.filler.Transformable;
 import project.bubbles.filler.Water;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Bottle extends Vessel implements Containable {
     private double bottleVolume;
     private Water water;
@@ -44,14 +47,24 @@ public class Bottle extends Vessel implements Containable {
         }
     }
 
-    private Bubble[] countNumberOfBubbles() {
-        int numberOfBubbles = (int) (getVolume() * 10000);
-        Bubble[] bubbles = new Bubble[numberOfBubbles];
+//    private Bubble[] countNumberOfBubbles() {
+//        int numberOfBubbles = (int) (getVolume() * 10000);
+//        Bubble[] bubbles = new Bubble[numberOfBubbles];
+//
+//        for (int i = 0; i < numberOfBubbles; i++) {
+//            bubbles[i] = new Bubble("CO2");
+//        }
+//        return bubbles;
+//    }
 
-        for (int i = 0; i < numberOfBubbles; i++) {
-            bubbles[i] = new Bubble("CO2");
-        }
-        return bubbles;
+    private int countNumberOfBubbles() {
+        return (int) (getVolume() * 10000);
+//        List<Bubble> bubbles = new ArrayList<>(numberOfBubbles);
+
+//        for (int i = 0; i < numberOfBubbles; i++) {
+//            bubbles.add(new Bubble("CO2"));
+//        }
+
     }
 
     @Override
