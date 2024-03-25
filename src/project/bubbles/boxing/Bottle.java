@@ -46,25 +46,9 @@ public class Bottle extends Vessel implements Containable {
             ((SparklingWater) stuff).pump(countNumberOfBubbles());
         }
     }
-
-//    private Bubble[] countNumberOfBubbles() {
-//        int numberOfBubbles = (int) (getVolume() * 10000);
-//        Bubble[] bubbles = new Bubble[numberOfBubbles];
-//
-//        for (int i = 0; i < numberOfBubbles; i++) {
-//            bubbles[i] = new Bubble("CO2");
-//        }
-//        return bubbles;
-//    }
-
+    
     private int countNumberOfBubbles() {
         return (int) (getVolume() * 10000);
-//        List<Bubble> bubbles = new ArrayList<>(numberOfBubbles);
-
-//        for (int i = 0; i < numberOfBubbles; i++) {
-//            bubbles.add(new Bubble("CO2"));
-//        }
-
     }
 
     @Override
