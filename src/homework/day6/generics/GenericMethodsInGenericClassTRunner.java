@@ -10,6 +10,10 @@ import homework.day3.playground.essence.craft.hand.Can;
 import homework.day3.playground.essence.craft.hand.Mug;
 import homework.day3.playground.essence.creatures.*;
 import project.bubbles.boxing.Bottle;
+import project.bubbles.boxingMaterial.Glass;
+import project.bubbles.boxingMaterial.Material;
+import project.bubbles.boxingMaterial.Metal;
+import project.bubbles.boxingMaterial.Plastic;
 
 public class GenericMethodsInGenericClassTRunner {
 
@@ -91,10 +95,10 @@ public class GenericMethodsInGenericClassTRunner {
                 new Motorbike(87, "New Motorbike")));
         motorbikeObject.genericMethodHalfGenArgs(new Motorbike(87,"The"), "motorbikes here");
 
-        bottleObject.genericMethodOneGenArg(new Bottle(7.8,7));
-        System.out.println(bottleObject.genericMethodTwoGenArgs(new Bottle(4.5,8),
-                new Bottle(6.7,8)));
-        bottleObject.genericMethodHalfGenArgs(new Bottle(3.3,5), "botlle");
+        bottleObject.genericMethodOneGenArg(new Bottle(7.8,7, 5, new Plastic()));
+        System.out.println(bottleObject.genericMethodTwoGenArgs(new Bottle(4.5,8, 45, new Glass()),
+                new Bottle(6.7,8, 21, new Metal())));
+        bottleObject.genericMethodHalfGenArgs(new Bottle(3.3,5, 43, new Glass()), "botlle");
 
         canObject.genericMethodOneGenArg(new Can(3, ""));
         System.out.println(canObject.genericMethodTwoGenArgs(new Can(2, ""), new Can(1, "")));

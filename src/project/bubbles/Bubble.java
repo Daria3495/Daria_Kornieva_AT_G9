@@ -8,8 +8,8 @@ public class Bubble {
         this.gasComposition = gasComposition;
     }
 
-    public void burstBubble() {
-        System.out.println("Cramp!");
+    public void cramp() {
+            System.out.print("Cramp!");
     }
 
     public double getBUBBLE_VOLUME() {

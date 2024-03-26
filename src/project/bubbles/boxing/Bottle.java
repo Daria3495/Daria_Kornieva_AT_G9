@@ -1,15 +1,21 @@
 package project.bubbles.boxing;
 
 import project.bubbles.Bubble;
-import project.bubbles.liquids.SparklingWater;
-import project.bubbles.liquids.Water;
+import project.bubbles.boxingMaterial.Glass;
+import project.bubbles.boxingMaterial.Material;
+import project.bubbles.filler.SparklingWater;
+import project.bubbles.filler.Transformable;
+import project.bubbles.filler.Water;
 
-public class Bottle {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Bottle extends Vessel implements Containable {
     private double bottleVolume;
     private Water water;
 
-    public Bottle(double bottleVolume, int temperature) {
-        this.bottleVolume = bottleVolume;
+    public Bottle(double volume, double diameter, int weight, Material material) {
+                super(volume, diameter, weight, material);
     }
 
     public double getBottleVolume() {
@@ -17,11 +23,14 @@ public class Bottle {
     }
 
     public void open() {
-        ((SparklingWater) water).setOpened();
+        if (stuff instanceof SparklingWater) {
+            ((SparklingWater) stuff).setOpened();
+        }
     }
+    // почему тут нужен инстанс офф
 
     public void warm(int temperature) {
-
+        System.out.printf("Warming water to: %s", temperature).println();
     }
 
     public Water getWater() {
@@ -33,17 +42,34 @@ public class Bottle {
     }
 
     public void setBubbles() {
-        ((SparklingWater) water).pump(countNumberOfBubbles());
+        if (stuff instanceof SparklingWater) {
+            ((SparklingWater) stuff).pump(countNumberOfBubbles());
+        }
+    }
+    
+    private int countNumberOfBubbles() {
+        return (int) (getVolume() * 10000);
     }
 
-    private Bubble[] countNumberOfBubbles() {
-        double bottleVolume = getBottleVolume();
-        int numberOfBubbles = (int) (bottleVolume * 10000);
-        Bubble[] bubbles = new Bubble[numberOfBubbles];
-
-        for (int i = 0; i < numberOfBubbles; i++) {
-            bubbles[i] = new Bubble("CO2");
+    @Override
+    public void addStuff(Transformable stuff) {
+        this.stuff = stuff;
+        if (stuff instanceof SparklingWater) {
+            setBubbles();
         }
-        return bubbles;
+        System.out.printf("Adding %s into Bottle", stuff.getClass().getSimpleName()).println();
+    }
+
+    @Override
+    public Transformable removeStuff() {
+        Transformable newStuff = this.stuff;
+        System.out.printf("Removing %s from Bottle", stuff.getClass().getSimpleName()).println();
+        this.stuff = null;
+        return newStuff;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return stuff == null;
     }
 }

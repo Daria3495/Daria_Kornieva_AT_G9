@@ -1,12 +1,12 @@
-package project.bubbles.liquids;
+package project.bubbles.filler;
 
-public abstract class Water {
-    private String color;
-    private String smell;
-    private int transparency;
-    private double temperature;
+public abstract class Water implements Transformable{
+    private String color = "no";
+    private String smell = "no";
+    private String transparency = "transparent";
+    private double temperature = 0;
 
-    public Water(String color, int transparency, String smell, double temperature) {
+    public Water(String color, String transparency, String smell, double temperature) {
         this.color = color;
         this.smell = smell;
         this.transparency = transparency;
@@ -29,7 +29,7 @@ public abstract class Water {
         this.smell = smell;
     }
 
-    public int getTransparency() {
+    public String getTransparency() {
         return transparency;
     }
 
